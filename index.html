@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management Intake Workflow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .stage-card { min-width: 350px; scroll-snap-align: start; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white p-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold uppercase tracking-wider text-blue-400">Client Intake Master Pipeline</h1>
+                <p class="text-slate-400 text-sm">Property Management Operations Roadmap</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-blue-600 text-xs px-3 py-1 rounded-full uppercase font-bold">Internal Use Only</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Horizontal Container -->
+    <main class="p-8">
+        <div class="flex space-x-6 overflow-x-auto pb-10 hide-scroll snap-x">
+
+            <!-- STAGE 1 -->
+            <div class="stage-card bg-white rounded-xl shadow-md border-t-4 border-blue-500 p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold mr-3">1</span>
+                    <h2 class="text-xl font-bold text-slate-800">Lead Capture</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Checklist</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><input type="checkbox" class="mr-2"> Capture Name, Phone, Email</li>
+                        <li><input type="checkbox" class="mr-2"> Verify Service Area</li>
+                        <li><input type="checkbox" class="mr-2"> Determine Lead Source</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 bg-slate-50 p-3 rounded-lg">
+                    <h3 class="text-xs font-bold text-blue-600 uppercase mb-2">Software Actions</h3>
+                    <p class="text-xs text-slate-500 mb-1"><strong>CRM:</strong> Auto-create Lead record</p>
+                    <p class="text-xs text-slate-500"><strong>Slack:</strong> Ping <span class="text-blue-600">#leads</span> channel</p>
+                </div>
+
+                <div class="mt-auto border-t pt-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Primary Integration</span>
+                    <p class="text-xs font-mono bg-blue-50 text-blue-700 p-2 mt-1 rounded">Webform ➔ Zapier ➔ HubSpot</p>
+                </div>
+            </div>
+
+            <!-- STAGE 2 -->
+            <div class="stage-card bg-white rounded-xl shadow-md border-t-4 border-purple-500 p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold mr-3">2</span>
+                    <h2 class="text-xl font-bold text-slate-800">Qualification</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Checklist</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><input type="checkbox" class="mr-2"> Discovery Call Completed</li>
+                        <li><input type="checkbox" class="mr-2"> Budget/Goals Discussed</li>
+                        <li><input type="checkbox" class="mr-2"> Send "How We Work" PDF</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 bg-slate-50 p-3 rounded-lg">
+                    <h3 class="text-xs font-bold text-purple-600 uppercase mb-2">Software Actions</h3>
+                    <p class="text-xs text-slate-500 mb-1"><strong>Calendar:</strong> Send Calendly link</p>
+                    <p class="text-xs text-slate-500"><strong>CRM:</strong> Log call notes immediately</p>
+                </div>
+
+                <div class="mt-auto border-t pt-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Primary Integration</span>
+                    <p class="text-xs font-mono bg-purple-50 text-purple-700 p-2 mt-1 rounded">Calendly ➔ G-Cal ➔ CRM</p>
+                </div>
+            </div>
+
+            <!-- STAGE 3 -->
+            <div class="stage-card bg-white rounded-xl shadow-md border-t-4 border-orange-500 p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold mr-3">3</span>
+                    <h2 class="text-xl font-bold text-slate-800">Walkthrough</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Checklist</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><input type="checkbox" class="mr-2"> Take Pre-Onboarding Photos</li>
+                        <li><input type="checkbox" class="mr-2"> Create Maintenance List</li>
+                        <li><input type="checkbox" class="mr-2"> Run Final Comp Report</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 bg-slate-50 p-3 rounded-lg">
+                    <h3 class="text-xs font-bold text-orange-600 uppercase mb-2">Software Actions</h3>
+                    <p class="text-xs text-slate-500 mb-1"><strong>Drive:</strong> Upload photos to shared folder</p>
+                    <p class="text-xs text-slate-500"><strong>Slack:</strong> Post walkthrough summary</p>
+                </div>
+
+                <div class="mt-auto border-t pt-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Primary Integration</span>
+                    <p class="text-xs font-mono bg-orange-50 text-orange-700 p-2 mt-1 rounded">Phone ➔ G-Drive ➔ CRM Link</p>
+                </div>
+            </div>
+
+            <!-- STAGE 4 -->
+            <div class="stage-card bg-white rounded-xl shadow-md border-t-4 border-emerald-500 p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center font-bold mr-3">4</span>
+                    <h2 class="text-xl font-bold text-slate-800">Contracting</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Checklist</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><input type="checkbox" class="mr-2"> Send Mgmt Agreement</li>
+                        <li><input type="checkbox" class="mr-2"> Collect W-9 / Tax Info</li>
+                        <li><input type="checkbox" class="mr-2"> Collect Keys/Codes</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 bg-slate-50 p-3 rounded-lg">
+                    <h3 class="text-xs font-bold text-emerald-600 uppercase mb-2">Software Actions</h3>
+                    <p class="text-xs text-slate-500 mb-1"><strong>E-Sign:</strong> Send DocuSign envelope</p>
+                    <p class="text-xs text-slate-500"><strong>Slack:</strong> Update <span class="text-emerald-600">#ops</span> on status</p>
+                </div>
+
+                <div class="mt-auto border-t pt-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Primary Integration</span>
+                    <p class="text-xs font-mono bg-emerald-50 text-emerald-700 p-2 mt-1 rounded">DocuSign ➔ Slack (Alert)</p>
+                </div>
+            </div>
+
+            <!-- STAGE 5 -->
+            <div class="stage-card bg-white rounded-xl shadow-md border-t-4 border-indigo-600 p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold mr-3">5</span>
+                    <h2 class="text-xl font-bold text-slate-800">Onboarding</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Checklist</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><input type="checkbox" class="mr-2"> Input into AppFolio/Buildium</li>
+                        <li><input type="checkbox" class="mr-2"> Verify Owner Insurance</li>
+                        <li><input type="checkbox" class="mr-2"> Schedule Lock Change</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 bg-slate-50 p-3 rounded-lg">
+                    <h3 class="text-xs font-bold text-indigo-600 uppercase mb-2">Software Actions</h3>
+                    <p class="text-xs text-slate-500 mb-1"><strong>PM Tool:</strong> New Property Entry</p>
+                    <p class="text-xs text-slate-500"><strong>Project:</strong> Create ClickUp/Monday Board</p>
+                </div>
+
+                <div class="mt-auto border-t pt-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Primary Integration</span>
+                    <p class="text-xs font-mono bg-indigo-50 text-indigo-700 p-2 mt-1 rounded">CRM (Won) ➔ ClickUp Template</p>
+                </div>
+            </div>
+
+            <!-- STAGE 6 -->
+            <div class="stage-card bg-white rounded-xl shadow-md border-t-4 border-pink-600 p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <span class="w-8 h-8 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold mr-3">6</span>
+                    <h2 class="text-xl font-bold text-slate-800">Go Live</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase mb-2">Checklist</h3>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><input type="checkbox" class="mr-2"> Syndicate to Zillow/MLS</li>
+                        <li><input type="checkbox" class="mr-2"> Place Yard Signage</li>
+                        <li><input type="checkbox" class="mr-2"> Notify Leasing Team</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6 bg-slate-50 p-3 rounded-lg">
+                    <h3 class="text-xs font-bold text-pink-600 uppercase mb-2">Software Actions</h3>
+                    <p class="text-xs text-slate-500 mb-1"><strong>Marketing:</strong> Launch Ad Spend</p>
+                    <p class="text-xs text-slate-500"><strong>Slack:</strong> CELEBRATION Notification</p>
+                </div>
+
+                <div class="mt-auto border-t pt-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Primary Integration</span>
+                    <p class="text-xs font-mono bg-pink-50 text-pink-700 p-2 mt-1 rounded">PM Software ➔ Slack #Announce</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Footer / Legend -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-500 border-t pt-6">
+            <div class="flex items-center">
+                <i class="fa-solid fa-bolt text-yellow-500 mr-2"></i>
+                <span><strong>Automation Tip:</strong> Use Zapier to link HubSpot to Slack so you never miss a new lead.</span>
+            </div>
+            <div class="flex items-center">
+                <i class="fa-solid fa-calendar-day text-blue-500 mr-2"></i>
+                <span><strong>Calendar Rule:</strong> No property visits without a Calendly booking first.</span>
+            </div>
+            <div class="flex items-center">
+                <i class="fa-solid fa-check-double text-green-500 mr-2"></i>
+                <span><strong>Contract Rule:</strong> All DocuSign notifications must ping the #contracts channel.</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
